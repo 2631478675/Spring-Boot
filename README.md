@@ -13,7 +13,20 @@
     - AwareService 实现 BeanNameAware,ResourceLoaderAware等接口
 - thread
 #### 第四章（springMvc_four）
-- 快速搭建springmvc
+- 快速搭建springmvc（baseCreate）
+- springmvc常用注解(annotation)
+    - @Controller：控制器bean，dispatcher Servlet会自动扫描有此注解的类
+    - @RequestMapping：映射web请求{produces：response的媒体类型和字符集，value：路径}
+    - @PathVariable：用来接收路径上的参数
+    - @ResponseBody：返回值可以放到response中，而不是返回一个页面
+    - @RestController；组合注解；@Controller+@ResponseBody
+- 静态资源映射
+    - 使用注解@EnableWebMvc，开启springmvc的直接，否则重写addResourceHandlers方法无效
+    - 配置类Dispatcher_servlet继承WebMvcConfigurerAdapter父类，重写addResourceHandlers()方法
+- 拦截器（interceptor）
+    - 定义bean
+    - 在配置类中注册bean，重写addInterceptors()注册拦截器
+- springMvc_four的配置（config）
    - WebXmlConfig
    - Dispatcher_servlet
         

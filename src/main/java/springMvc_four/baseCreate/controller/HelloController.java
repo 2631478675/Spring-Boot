@@ -1,4 +1,4 @@
-package springMvc_four.controller;
+package springMvc_four.baseCreate.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
