@@ -39,9 +39,46 @@
 - springMvc_four的配置（config）
    - WebXmlConfig
    - Dispatcher_servlet
-        
+---
+> ps:前四章主要是为了从xml向0配置过渡，不过有些地方没做笔记或实现代码，原因是自认为现在能力不能理解或者用不到。
+
+---  
+
 #### 第五章
 > 大概讲述怎么创建springBoot项目，可自行百度
+
+- 创建成功springboot项目中src下的自动生成文件
+    - main
+        - java
+            - *Application :自动生成的入口类（.java中有讲解）
+        - resources
+            - static：存放脚本样式，图片等静态文件
+            - templates：存放页面（如：index.html）
+            - application.properties:spring boot 配置文件
+    - test
+        - java
+            - *Application
 - [csdn创建springboot项目博客地址](https://blog.csdn.net/typa01_kk/article/details/76696618)
 
+
+
 #### 第六章（spring-boot-base）
+- 提倡0配置，无xml配置
+- 基于jar包运行
+- 入口类
+    - @SpringBootApplication的使用
+> ps:这章很多在讲springboot原理（可以自己找源码看，或者看书。。。）
+
+#### 第七章（spring-boot-web）
+- spring-boot-starter-web提供嵌入的Tomcat和springmvc的依赖
+- 引入Thymeleaf代替jsp
+    - 原因：内嵌的Tomcat不支持以jar形式运行jsp 
+    - 类似js(水平垃圾，之后会看js)
+- **==web相关配置==**
+    - 自动配置ViewResolver
+    - 自动配置静态资源
+    - 静态首页的支持
+    - 待续。。。
+    - ps:可以自己实现相关配置：自己的配置和spring boot的自动配置**同时有效**
+- 第七章待续。。。
+#### 第八章
