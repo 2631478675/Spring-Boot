@@ -26,6 +26,16 @@
 - 拦截器（interceptor）
     - 定义bean
     - 在配置类中注册bean，重写addInterceptors()注册拦截器
+-  全局异常处理（advice）
+    - @ControllerAdvice：做全局处理(全局异常处理)
+    - @ExceptionHandler的value属性过滤拦截条件
+- 文件上传
+    - 编写upload.jsp页面
+    - 配置MultipartResolver来实现上传文件（spring控制器中通过）
+    - MultipartFile file接收文件，MultipartFile[] files接收多个文件
+    - 配置addViewController实现页面跳转，这有啥用？？？
+    
+      
 - springMvc_four的配置（config）
    - WebXmlConfig
    - Dispatcher_servlet
