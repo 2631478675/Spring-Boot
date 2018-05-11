@@ -1,6 +1,6 @@
 # Spring-Boot
 ###### 大致实现一下Spring Boot实战的代码
-[超大佬博客](https://www.jianshu.com/p/9a08417e4e84)
+[超大佬博客，推荐一下](https://www.jianshu.com/p/9a08417e4e84)
 #### 第一章（springBase_one）
 - aop
    - ioc
@@ -55,10 +55,11 @@
         - resources
             - static：存放脚本样式，图片等静态文件
             - templates：存放页面（如：index.html）
-            - application.properties:spring boot 配置文件
+            - application.properties:spring boot 配置文件,可以修改springboot默认配置
     - test
         - java
             - *Application
+
 - [csdn创建springboot项目博客地址](https://blog.csdn.net/typa01_kk/article/details/76696618)
 
 
@@ -68,6 +69,18 @@
 - 基于jar包运行
 - 入口类
     - @SpringBootApplication的使用
+- yml使用：配置文件代替以前的.xml（YMLUse待续。。。）  
+- @Value和@ConfigurationProperties对比,（Person） 
+    - @PropertySource注解使用场景
+    - 导入spring的配置文件，让配置文件里面的内容生效,在SpringBootBaseApplication中添加此注解(TestImportResouceService )   但是！！！不推荐使用      
+    - 使用config代替@ImportResouce
+- Profile的使用（现无使用场景）
+- 使用slf4j和logback创建日志，spring boot已经为我们配置了日志
+    - 在SpringBootBaseApplicationTests使用下
+    - spring boot默认使用的是info级别的，可以再application.properties上可以更改
+    - 可以自己设置logback.xml，只需要放对位置并命对名（寻找适当应用环境）
+> spring boot 能自动适配所有日志，而且底层使用slf4j+logback的方式记录日志
+    
 > ps:这章很多在讲springboot原理（可以自己找源码看，或者看书。。。）
 
 #### 第七章（spring-boot-web）
@@ -82,4 +95,19 @@
     - 待续。。。
     - ps:可以自己实现相关配置：自己的配置和spring boot的自动配置**同时有效**
 - 第七章待续。。。
+#### 第七章（spring-boot-web-atguigu）
+- 静态资源的引入（前端？）
+    - 默认：只需引入jQuery的包
+    - 自己建立静态资源（放对地方）
+        - public
+        - static
+        - templates
+- 不支持jsp，使用别的模板引擎（Thymeleaf）
+    - 引入thymeleaf包
+    - 页面放到templates中
+    - thymeleaf使用&&语法
+        - 待续，嘿嘿
+> spring boot底层到底对springmvc做了哪些配置？？？
+- springmvc的自动配置
+    - [官网地址](https://docs.spring.io/spring-boot/docs/1.5.10.RELEASE/reference/htmlsingle/#boot-features-developing-web-applications)
 #### 第八章

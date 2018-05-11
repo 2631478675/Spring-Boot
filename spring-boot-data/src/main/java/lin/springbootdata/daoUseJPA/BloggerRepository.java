@@ -7,6 +7,5 @@ import java.util.List;
 
 public interface BloggerRepository extends JpaRepository<Blogger,Long> {
 
-
     List<Blogger> findByName(String name);
 }
