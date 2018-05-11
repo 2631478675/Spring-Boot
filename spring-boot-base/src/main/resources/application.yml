@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+#person:
+#  lastName: liuyuanlin
+#  age: 20
+#  boss: false
+#  birth: 1998/1/14
+#  maps: {k1: v1,k2: v2}
+#  lists:
+#    - lisi
+#    - zhaozhu
+#  dog:
+#    name: 狗
+#    age: 12

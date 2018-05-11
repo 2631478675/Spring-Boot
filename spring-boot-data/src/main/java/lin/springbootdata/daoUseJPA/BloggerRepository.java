@@ -1,4 +1,4 @@
-package lin.springbootdata.dao;
+package lin.springbootdata.daoUseJPA;
 
 import lin.springbootdata.entity.Blogger;
 import org.springframework.data.jpa.repository.JpaRepository;

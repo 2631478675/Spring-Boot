@@ -1,7 +1,7 @@
 package lin.springbootdata.controller;
 
 
-import lin.springbootdata.dao.BloggerRepository;
+import lin.springbootdata.daoUseJPA.BloggerRepository;
 import lin.springbootdata.entity.Blogger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

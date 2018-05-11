@@ -5,9 +5,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
+//@Table(name="blogger")
 public class Blogger {
     @Id
     @GeneratedValue
+    //@Column(name="id")
     private Long id;
     private String name;
     private Integer age;
