@@ -108,6 +108,11 @@
     - thymeleaf使用&&语法
         - 待续，嘿嘿
 > spring boot底层到底对springmvc做了哪些配置？？？
+- 自动配置
+    - HttpMessageConverter:SpringMvc用来转换Http请求和响应的；User-->json
+    - 内含Formatter格式化器
+    - 内含Converter转换器
 - springmvc的自动配置
     - [官网地址](https://docs.spring.io/spring-boot/docs/1.5.10.RELEASE/reference/htmlsingle/#boot-features-developing-web-applications)
+
 #### 第八章
