@@ -1,4 +1,4 @@
-package springboot.springbootwebatguigu.Pojo;
+package springboot.springbootjdbc.Pojo;
 
 
 import org.springframework.validation.annotation.Validated;
@@ -78,5 +78,16 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
