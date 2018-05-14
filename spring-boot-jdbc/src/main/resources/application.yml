@@ -4,4 +4,6 @@ spring:
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/spring-boot-jdbc
+    #指定数据源的类型
+    type: com.alibaba.druid.pool.DruidDataSource
 

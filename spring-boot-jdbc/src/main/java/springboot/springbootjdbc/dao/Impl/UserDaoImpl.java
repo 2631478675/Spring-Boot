@@ -1,6 +1,7 @@
 package springboot.springbootjdbc.dao.Impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -26,9 +27,10 @@ public class UserDaoImpl implements UserDao {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    public JdbcTemplate getJdbcTemplate() {
-        return jdbcTemplate;
+    public String WholeStringForQuery(){
+        return " user_id id ,user_name username , user_password password ,user_phone phoneNumber,user_email email";
     }
+
 
     public RowMapper<User> getRowMapper() {
         return new BeanPropertyRowMapper<>(User.class);
@@ -45,10 +47,16 @@ public class UserDaoImpl implements UserDao {
     }
     //user_id id,user_name username,user_password password, user_phone phoneNumber,user_email email
     @Override
-    public User findByName(String name) throws Exception{
-        String sql="select *  from user where user_name = ?";
-        System.out.println(jdbcTemplate.queryForObject(sql,getRowMapper(),name));
-        return jdbcTemplate.queryForObject(sql,getRowMapper(),name);
+    public User findByName(String name){
+        String sql="select"+WholeStringForQuery()+" from user where user_name = ?";
+        try{
+            User user = jdbcTemplate.queryForObject(sql,getRowMapper(),name);
+            System.out.println(user);
+            return jdbcTemplate.queryForObject(sql,getRowMapper(),name);
+        }catch (EmptyResultDataAccessException e){
+            return null;
+        }
+
     }
 
     @Override
@@ -57,7 +65,8 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public void deleteByName(String name)  {
-
+    public boolean deleteByName(String name)  {
+        String sql="delete from user where user_name = ?";
+        return jdbcTemplate.update(sql,name)==1;
     }
 }

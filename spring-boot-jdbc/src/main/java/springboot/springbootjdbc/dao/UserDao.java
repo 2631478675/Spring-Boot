@@ -12,10 +12,10 @@ public interface UserDao {
 
     void update(User user);
 
-    User findByName(String name) throws Exception;
+    User findByName(String name);
 
     List<User> finfAll() ;
 
-    void deleteByName(String name);
+    boolean deleteByName(String name);
 
 }

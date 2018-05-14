@@ -15,10 +15,8 @@ public class UserServiceImpl implements UserService {
     UserDao userDao;
 
     @Override
-    public User findByName(String name) throws Exception {
-//        if(userDao.findByName(name)==null){
-////            throws Exception;
-//        }
+    public User findByName(String name){
+
         return userDao.findByName(name);
     }
 }
