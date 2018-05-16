@@ -51,7 +51,6 @@ public class UserDaoImpl implements UserDao {
         String sql="select"+WholeStringForQuery()+" from user where user_name = ?";
         try{
             User user = jdbcTemplate.queryForObject(sql,getRowMapper(),name);
-            System.out.println(user);
             return jdbcTemplate.queryForObject(sql,getRowMapper(),name);
         }catch (EmptyResultDataAccessException e){
             return null;

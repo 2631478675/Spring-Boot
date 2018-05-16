@@ -36,7 +36,7 @@ public class SpringBootJdbcApplicationTests {
 	public void contextLoads() throws Exception {
 
 		//getClass()获得对象的类的信息
-		System.out.println(dataSource.getClass().getName());
+		System.out.println(dataSource.getClass());
 		Connection connection=dataSource.getConnection();
 
 		System.out.println(connection.getClass().getName());
