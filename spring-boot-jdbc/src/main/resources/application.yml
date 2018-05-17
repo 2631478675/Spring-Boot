@@ -1,6 +1,10 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
 # 数据库访问配置
 # 主数据源，默认的
-spring:
   datasource:
     username: root
     password: 123456
