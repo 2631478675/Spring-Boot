@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class TestJspController {
-    @GetMapping(value = "/testJsp")
+    @GetMapping(value = "/intergration")
     public String intergration(){
-        return "intergration.jsp";
+        return "intergration";
     }
 }
