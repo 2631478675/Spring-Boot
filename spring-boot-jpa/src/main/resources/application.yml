@@ -5,7 +5,7 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/spring-boot-jdbc?characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/spring-boot-jpa?characterEncoding=utf8
     #指定数据源的类型,Druid数据源的使用
     #①导包
     #②在.yml中增加配置
