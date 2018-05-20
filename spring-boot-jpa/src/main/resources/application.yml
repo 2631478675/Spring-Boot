@@ -1,4 +1,9 @@
 spring:
+   jpa:
+      properties:
+        hibernate:
+          show_sql: true
+          format_sql: true
 # 数据库访问配置
 # 主数据源，默认的
   datasource:
