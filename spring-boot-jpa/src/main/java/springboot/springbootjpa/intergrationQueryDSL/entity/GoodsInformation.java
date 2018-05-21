@@ -2,10 +2,11 @@ package springboot.springbootjpa.intergrationQueryDSL.entity;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "good_info")
-public class GoodsInformation {
+public class GoodsInformation  implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

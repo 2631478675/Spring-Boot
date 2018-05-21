@@ -1,5 +1,4 @@
 spring:
-
 # 数据库访问配置
 # 主数据源，默认的
   datasource:
@@ -38,7 +37,17 @@ spring:
     # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
   jpa:
-      properties:
-        hibernate:
+    properties:
+      hibernate:
         show_sql: true
         format_sql: true
+    #配置redis数据库连接
+  redis:
+    host: localhost
+    port: 6379
+#    pool:
+#      max-idle: 20
+#       min-idle: 1
+#      max-active: 20
+#      max-wait: 60000
+    database: 0 #默认是索引为的0的数据库
