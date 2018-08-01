@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring_boot_jpa?characterEncoding=utf8&useSSL=false
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+debug: true
+#配置redis数据库连接
+#  redis:
+#    host: 127.0.0.1
+#    port: 6379
+#    pool:
+#      max-idle: 20
+#      min-idle: 1
+#      max-active: 20
+#      max-wait: 60000
+#    database: 0
