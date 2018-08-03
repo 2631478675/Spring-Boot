@@ -48,9 +48,9 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
         //super.configure(auth);
         auth.inMemoryAuthentication().passwordEncoder(new BCryptPasswordEncoder()).withUser("zhangsan").password(new BCryptPasswordEncoder().encode("123456")).roles("VIP1","VIP2")
                 .and()
-                .withUser("lisi").password("123456").roles("VIP2","VIP3")
+                .passwordEncoder(new BCryptPasswordEncoder()).withUser("lisi").password(new BCryptPasswordEncoder().encode("123456")).roles("VIP2","VIP3")
                 .and()
-                .withUser("wangwu").password("123456").roles("VIP1","VIP3");
+                .passwordEncoder(new BCryptPasswordEncoder()).withUser("wangwu").password(new BCryptPasswordEncoder().encode("123456")).roles("VIP1","VIP3");
 
     }
 }
