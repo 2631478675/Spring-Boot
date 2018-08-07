@@ -15,15 +15,20 @@ public class PersonServiceImpl implements IPersonService {
     @Autowired
     PersonRepository personRepository;
 
+    /**
+     *     @Cacheable(value = "person",  //person中的缓存放入person中，student缓存放入student中
+    //key = "",  缓存的key，默认使用参数的值：#name/#a0/#root.args[0] （key、keyGenerator二选一）
+    keyGenerator = "keyGenerator"//自定义keyGenerator,个人不建议使用
+    //condition = "", //对形参进行条件判断，（condition、unless二选一）
+    //            unless = "",
+    //            sync = "" //是否使用异步模式，默认为false，并且不支持unless的使用
+    )
+     * @param name
+     * @return
+     */
 
     @Override
-    @Cacheable(value = "person",  //person中的缓存放入person中，student缓存放入student中
-            //key = "",  缓存的key，默认使用参数的值：#name/#a0/#root.args[0] （key、keyGenerator二选一）
-            keyGenerator = "keyGenerator"//自定义keyGenerator,个人不建议使用
-            //condition = "", //对形参进行条件判断，（condition、unless二选一）
-//            unless = "",
-//            sync = "" //是否使用异步模式，默认为false，并且不支持unless的使用
-    )
+    @Cacheable(value = "person",keyGenerator = "keyGenerator")
     public List<Person> findByName(String name) {
         List<Person> personList = personRepository.findByAddress(name);
         return personList;

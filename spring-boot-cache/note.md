@@ -19,5 +19,6 @@
 - redis默认缓存的是序列化后的数据，我们将解决掉这个问题，使得缓存的是json
     - 引入了redis的starter，cacheManager变为 RedisCacheManager；
     - 默认创建的 RedisCacheManager 操作redis的时候使用的是 RedisTemplate<Object, Object>,RedisTemplate<Object, Object> 是 默认使用jdk的序列化机制
-    
+#### 整合Spring boot2.0遇到的坑
+- [解决方法](http://wsghawk.com/2018/03/19/Redis%E7%BC%93%E5%AD%98%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/)
 ![image](http://p3379ff71.bkt.clouddn.com/6.40.48.png)
