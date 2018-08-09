@@ -23,9 +23,9 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
     public void configureAuthentication(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
         authenticationManagerBuilder
                 // 设置UserDetailsService
-                .userDetailsService(userService);
-                // 使用BCrypt进行密码的hash
-//                .passwordEncoder(passwordEncoder());
+                .userDetailsService(userService)
+//                 使用BCrypt进行密码的hash
+                .passwordEncoder(passwordEncoder());
     }
 
     // 装载BCrypt密码编码器
@@ -34,10 +34,7 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
-//    @Bean
-//    public JwtAuthenticationTokenFilter authenticationTokenFilterBean() throws Exception {
-//        return new JwtAuthenticationTokenFilter();
-//    }
+
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {

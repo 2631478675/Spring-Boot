@@ -96,3 +96,8 @@ http.rememberMe()；
 ```
 
 #### thymeleaf整和security，实现不同角色看到页面不同，待续。。。。
+
+---
+#### 使用数据库中的数据整合security
+- ⚠️：[首先要注册，才能测试，自己insert进的数据中密码没有进行加密](http://www.spring4all.com/article/421)
+- 要实现
