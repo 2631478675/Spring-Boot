@@ -1,5 +1,6 @@
 package deki.com.springbootsecurity.controller;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,6 +32,8 @@ public class KungfuController {
 	 * @param path
 	 * @return
 	 */
+
+	@PreAuthorize("hasAuthority('ROLE_USER')")
 	@GetMapping("/level1/{path}")
 	public String level1(@PathVariable("path")String path) {
 		return PREFIX+"level1/"+path;
@@ -41,6 +44,8 @@ public class KungfuController {
 	 * @param path
 	 * @return
 	 */
+
+	@PreAuthorize("hasAuthority('ROLE_USER')")
 	@GetMapping("/level2/{path}")
 	public String level2(@PathVariable("path")String path) {
 		return PREFIX+"level2/"+path;
@@ -51,6 +56,8 @@ public class KungfuController {
 	 * @param path
 	 * @return
 	 */
+
+	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
 	@GetMapping("/level3/{path}")
 	public String level3(@PathVariable("path")String path) {
 		return PREFIX+"level3/"+path;
