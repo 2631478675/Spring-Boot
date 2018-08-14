@@ -14,35 +14,35 @@ import java.util.Map;
 @SpringBootTest
 public class SpringBootMessageApplicationTests {
 
-	@Autowired
-	RabbitTemplate rabbitTemplate;
+    @Autowired
+    RabbitTemplate rabbitTemplate;
 
-	static{
-		Map<String,Object> map = new HashMap<String,Object>();
-		map.put("test","i am a boy");
-	}
+    static {
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("test", "i am a boy");
+    }
 
-	@Test
-	public void contextLoads() {
-		//发送的是object转化为message
+    @Test
+    public void contextLoads() {
+        //发送的是object转化为message
 //		rabbitTemplate.send();
-		//直接发送object
-		Map<String,Object> map = new HashMap<String,Object>();
-		map.put("test","i am a boy");
-		rabbitTemplate.convertAndSend("deki.direct","deki",map);
-	}
+        //直接发送object
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("test", "i am a boy");
+        rabbitTemplate.convertAndSend("deki.direct", "deki", map);
+    }
 
-	/**
-	 * 一次默认拿一条数据（先进入队列的优先）
-	 * 在queue中为序列化后的数据，取出后为原类型，如map:{test=i am a boy}
-	 */
-	@Test
-	public void receive(){
-		Object o = rabbitTemplate.receiveAndConvert("deki");
-		System.out.println(o);
-	}
+    /**
+     * 一次默认拿一条数据（先进入队列的优先）
+     * 在queue中为序列化后的数据，取出后为原类型，如map:{test=i am a boy}
+     */
+    @Test
+    public void receive() {
+        Object o = rabbitTemplate.receiveAndConvert("deki");
+        System.out.println(o);
+    }
 
-	/**
-	 * 解决queue中的数据变为json类型
-	 */
+    /**
+     * 解决queue中的数据变为json类型
+     */
 }
