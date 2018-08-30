@@ -1,0 +1,6 @@
+springboot\springbootwebatguigu\Controller\LoginController.class
+springboot\springbootwebatguigu\Pojo\User.class
+springboot\springbootwebatguigu\Response\Response.class
+springboot\springbootwebatguigu\dao\UserRepositry.class
+springboot\springbootwebatguigu\Response\Response$Status.class
+springboot\springbootwebatguigu\SpringBootWebAtguiguApplication.class

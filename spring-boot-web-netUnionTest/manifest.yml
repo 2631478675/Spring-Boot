@@ -1,0 +1,11 @@
+---
+applications:
+- name: netunion
+  memory: 1G
+  path: target/netunion-0.0.1-SNAPSHOT.jar
+  buildpack: java_buildpack
+  services:
+  - post
+#Switch off logger by default
+  env:
+    logging_level: "OFF"
