@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="springboottestsap:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="spring-boot-test-sap.war">
+      <element id="artifact" artifact-name="springboottestsap:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="spring-boot-web-netUnionTest:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/spring_boot_web_netUnionTest_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="spring-boot-web-netUnionTest/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="spring-boot-web-netUnionTest" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
