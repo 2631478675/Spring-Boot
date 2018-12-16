@@ -1,0 +1,7 @@
+ems:
+   spring:
+      datasource:
+         tomcat: {
+            MinIdle: 10,
+            TestWhileIdle: true
+         }
